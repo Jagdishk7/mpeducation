@@ -8,10 +8,13 @@ a{
 
 .simplecard-head{
     font-weight: 500;
-    background-color: #b2c2bf ;
+    color: #DCE2F0;
+    /* background-color: #b2c2bf ; */
+    background-color: #50586C ;
 }
 .simplecard-desc{
-    background-color: #c0ded9 ;
+    /* background-color: #c0ded9 ; */
+    background-color: #DCE2F0 ;
 }
 .image-card{
     box-shadow: none !important;

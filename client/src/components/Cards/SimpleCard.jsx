@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import './Cards.css'
 
-const SimpleCard = ({head}) => {
+const SimpleCard = ({head,desc}) => {
   return (
     <div>
         <Card
@@ -16,8 +16,7 @@ const SimpleCard = ({head}) => {
           <Card.Body className='simplecard-desc'>
             {/* <Card.Title>{head} </Card.Title> */}
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              {desc}
             </Card.Text>
           </Card.Body>
         </Card>
