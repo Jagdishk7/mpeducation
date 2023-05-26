@@ -1,10 +1,9 @@
+
 const express = require('express');
 const collection = require('./mongo');
 const cors = require('cors');
-const router = require("./routes/router");
 // Node.js server code
 
-const nodemailer = require('nodemailer');
 
 const app = express();
 
@@ -12,7 +11,6 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
-app.use(router)
 
 
 app.get('/login',cors(),(req,resp)=>{
@@ -74,41 +72,10 @@ app.post('/register',async(req,resp)=>{
 })
 
 
-app.listen(8000,()=>{
-    console.log('the port is connected')
-})
-
 
 // ================= Contact Form Code ===============================
 
 
-// Endpoint to handle form submissions
-app.post('/contact', async (req, res) => {
-    const { name, email, message } = req.body;
-  
-    // Create a transporter using your email service credentials
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
-  auth: {
-    user: 'icoesender@gmail.com',
-    pass: 'icoesender123'
-  }
+  app.listen(5000,()=>{
+    console.log('the port is connected')
 })
-  
-    try {
-      // Send the email
-      await transporter.sendMail({
-        from: email,
-        to: 'pwdacait7@gmail.com',
-        subject: 'New Contact Form Submission',
-        text: `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`
-      });
-  
-      res.status(200).json({ message: 'Email sent successfully!' });
-    } catch (error) {
-      console.error('Error sending email:', error);
-      res.status(500).json({ error: 'An error occurred while sending the email.' });
-    }
-  });

@@ -1,7 +1,10 @@
+require('dotenv').config()
+console.log(process.env.MONGODB_URL)
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://0.0.0.0:27017/schoolDB")
+mongoose.connect(process.env.MONGODB_URL)
 .then(() => {
     console.log('mongodb connected')
+    // console.log(process.env.MONGODB_URL)
 })
 .catch((e)=>{
     console.log('connection failed')
