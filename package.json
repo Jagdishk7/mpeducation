@@ -1,5 +1,5 @@
 {
-    "name": "schoolweb",
+    "name": "server",
     "version": "1.0.0",
     "description": "# Lessons",
     "main": "index.js",
@@ -10,7 +10,7 @@
     },
     "repository": {
       "type": "git",
-      "url": "git+https://github.com/basir/mern-amazona.git"
+      "url": "https://github.com/Jagdishk7/mpeducation.git"
     },
     "author": "",
     "license": "ISC"
